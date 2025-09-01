@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>সতর্কবার্তা</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Slab:wght@300;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto Slab', serif;
+      background: #000;
+    }
+
+    /* Company Name Banner */
+    #companyBanner {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 700px;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 22px 25px;
+      font-weight: 700;
+      font-size: 34px;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #444;
+      box-shadow: 0 6px 25px rgba(255, 255, 255, 0.15);
+      z-index: 9999;
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+    }
+
+    /* Warning Banner */
+    .banner {
+      position: fixed;
+      left: 50%;
+      top: 120px;
+      transform: translateX(-50%) translateY(-50px);
+      width: 95%;
+      max-width: 700px;
+      min-height: 180px;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 35px 30px;
+      border-radius: 18px;
+      border: 1px solid #555;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+      font-size: 22px;
+      line-height: 1.8;
+      z-index: 9998;
+      opacity: 0;
+      font-family: 'Roboto Slab', serif;
+      box-sizing: border-box;
+      animation: popupShow 1s forwards; /* অ্যানিমেশন চালু */
+    }
+
+    .banner strong {
+      color: #ff4d4d;
+      font-weight: 700;
+    }
+
+    /* Leader Name Style */
+    .leader-container {
+      display: block;
+      margin-top: 22px;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .leader-name {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      letter-spacing: 1.5px;
+      margin-top: 6px;
+    }
+
+    @keyframes popupShow {
+      0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      #companyBanner { font-size: 28px; padding: 18px 20px; }
+      .banner { font-size: 18px; padding: 28px 20px; min-height: 160px; border-radius: 14px; }
+      .leader-container { font-size: 16px; }
+      .leader-name { font-size: 14px; letter-spacing: 1px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Company Name -->
+  <div id="companyBanner">RYVON</div>
+
+  <!-- একটাই পপ-আপ -->
+  <div class="banner" id="popup">
+    ⚠ <strong>আপনার ইতিমধ্যে এখানে রেজিস্টার করা নাই।</strong><br>
+    দয়া করে আপনার লিডারের সাথে যোগাযোগ করে রেজিস্টার করুন।<br>
+    <span class="leader-container">আপনার লিডার:
+      <span class="leader-name">Ariyan Khan (Sakid)</span>
+    </span>
+  </div>
+
+</body>
+</html>
